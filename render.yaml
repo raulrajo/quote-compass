@@ -1,0 +1,16 @@
+# Render Blueprint for the QuoteCompass API.
+# Create the MongoDB Atlas cluster separately and set MONGODB_URI + CORS_ORIGIN
+# in the Render dashboard (they are marked sync:false so they aren't committed).
+services:
+  - type: web
+    name: quote-compass-api
+    runtime: node
+    rootDir: server
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: MONGODB_URI
+        sync: false
+      - key: CORS_ORIGIN
+        sync: false

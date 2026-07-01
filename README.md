@@ -9,7 +9,7 @@ Request for Quote (RFQ), pastes in the free-text quotes suppliers send back, and
 2. **Recommends** the best option across all quotes with plain-English reasoning
 3. **Drafts** a follow-up email to any supplier.
 
-> **Live demo:** _URL_ · **Bring your own Anthropic API key** (stored only in your browser).
+> **Live demo:** **[quote-compass.vercel.app](https://quote-compass.vercel.app)** · **Bring your own Anthropic API key** (stored only in your browser).
 
 ---
 
@@ -57,7 +57,7 @@ to do the tedious part, so the engineer can decide.
                                        Multi-step LLM workflow:  extract ──▶ recommend ──▶ draft ────────────┘
 ```
 
-**Data model:** `RFQ` → many `Quote`s → each references a `Supplier`. All records are scoped by a
+**Data model:** `RFQ` → many `Quotes` → each references a `Supplier`. All records are scoped by a
 per-browser `sessionId` so public-demo visitors never collide.
 
 **The LLM layer** ([`server/src/services`](server/src/services)) is three focused Claude calls:

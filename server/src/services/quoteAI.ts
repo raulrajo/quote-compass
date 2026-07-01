@@ -91,7 +91,9 @@ export function recommend(
     'weigh unit price, total cost, lead time, MOQ and payment terms against the ' +
     "RFQ's quantity and target lead time. Recommend the best overall option and " +
     'explain the trade-offs plainly. Reward the quote that best fits the actual need, ' +
-    'not merely the cheapest. Reference each quote by its id.'
+    'not merely the cheapest. Use each quote id ONLY to fill the recommendedQuoteId and ' +
+    'quoteId fields; in all prose (headline, reasoning, pros, cons) refer to suppliers by ' +
+    'name only — never mention or print an id.'
 
   const user =
     `RFQ:\n${describeRfq(rfq)}\n\n` +

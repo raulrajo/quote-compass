@@ -2,7 +2,8 @@ import { getApiKey, getSessionId } from './session'
 import type { Quote, Recommendation, Rfq, Supplier } from '../types'
 
 // Empty in dev (Vite proxies /api → :4000); set VITE_API_BASE to the API URL in prod.
-const API_BASE = import.meta.env.VITE_API_BASE ?? ''
+// Trailing slashes are stripped so `${API_BASE}/api` never becomes `//api`.
+const API_BASE = (import.meta.env.VITE_API_BASE ?? '').replace(/\/+$/, '')
 
 export class ApiError extends Error {
   status: number

@@ -13,6 +13,34 @@ Request for Quote (RFQ), pastes in the free-text quotes suppliers send back, and
 
 ---
 
+## Walkthrough
+
+<!-- Optional hero GIF: record the full flow (~6–8s) and drop it here for the strongest first impression.
+<p align="center"><img src="docs/screenshots/demo.gif" alt="QuoteCompass end-to-end demo" width="800"></p>
+-->
+
+**1. Compare every quote at a glance — with an AI recommendation.**
+Claude ranks each supplier 0–100 against the RFQ (price *and* lead time *and* MOQ), highlights the best row, and explains why in plain English.
+
+![Side-by-side comparison table with the AI recommendation and the best supplier highlighted](docs/screenshots/comparison-recommendation.png)
+
+**2. Paste the messy quote suppliers actually send.**
+Free-text email in — different currencies, "3–4 weeks" lead times, MOQs buried in a sentence. Claude extracts validated, structured fields with a confidence score.
+
+![Adding a raw, unstructured supplier quote for AI extraction](docs/screenshots/messy-quote-input.png)
+
+**3. Draft a follow-up in one click.**
+Generate a professional email to any supplier — ready to review and send.
+
+![AI-drafted follow-up email to a supplier](docs/screenshots/ai-followup-email.png)
+
+**4. It all starts from a structured RFQ.**
+Capture the part, material, process, quantity and target lead time that every quote is compared against.
+
+![Creating a Request for Quote](docs/screenshots/rfq.png)
+
+---
+
 ## Why this project
 
 Real supplier quotes arrive as unstructured emails — different currencies, "3–4 weeks" lead
